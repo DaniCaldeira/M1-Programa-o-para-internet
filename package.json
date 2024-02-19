@@ -1,0 +1,27 @@
+{
+  "name": "m1-programa-o-para-internet",
+  "version": "1.0.0",
+  "description": "Vendas de ingressos online",
+  "main": "index.js",
+  "type": "module",
+  "scripts":
+  { "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaniCaldeira/M1-Programa-o-para-internet.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "javascript",
+    "programação"
+  ],
+  "author": "Danielle Caldeira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DaniCaldeira/M1-Programa-o-para-internet/issues"
+  },
+  "homepage": "https://github.com/DaniCaldeira/M1-Programa-o-para-internet#readme"
+}
