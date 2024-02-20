@@ -7,7 +7,6 @@ function validar(e) {
         e.stopPropagation();
     } else {
         form.classList.remove('was-validated');
-        window.location.href = 'eventos.html'; // Redireciona para a página eventos.html após o envio do formulário
     }
 }
 
