@@ -16,11 +16,11 @@ app.use(session({
     cookie:{
         maxAge: 60 * 1000 * 15
     }
-}))
+}));
 
 app.use(express.static(path.join(process.cwd(), 'publico')));
 
-app.use(autenticar, express.static(path.join(process.cwd(), 'privado')))
+app.use('/privado', autenticar, express.static(path.join(process.cwd(), 'privado')));
 
 app.listen(porta, host, ()=>{
     console.log(`Servidor escutando em http://${host}:${porta}`);
