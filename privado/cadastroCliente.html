@@ -39,16 +39,19 @@
         }
 
         /* Botão Comprar Convite */
-        #comprarConvite {
+        .button {
             background-color: #007bff;
             color: #fff;
             border: none;
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 10px;
         }
 
-        #comprarConvite:hover {
+        .button:hover {
             background-color: #0056b3;
         }
     </style>
@@ -72,25 +75,19 @@
             </section>
             <section>
                 <h2>Horários</h2>
-                <p>Dia 1: 18:00 - 22:00</p>
-                <p>Dia 2: 18:00 - 22:00</p>
-                <p>Dia 3: 18:00 - 22:00</p>
+                <p>Dia 1: 18:00 - 22:00 <a href="detalhes_dia1.html" class="button">Detalhes</a></p>
+                <p>Dia 2: 18:00 - 22:00 <a href="detalhes_dia2.html" class="button">Detalhes</a></p>
+                <p>Dia 3: 18:00 - 22:00 <a href="detalhes_dia3.html" class="button">Detalhes</a></p>
             </section>
             <section>
                 <h2>Compre seu Convite</h2>
                 <p>Adquira seu convite para o evento beneficente e apoie a causa dos gatinhos!</p>
-                <button id="comprarConvite">Comprar Convite</button>
+                <button id="comprarConvite" class="button">Comprar Convite</button>
             </section>
         </main>
         <footer>
             <p>&copy; 2024 Projeto Gatitos</p>
         </footer>
     </div>
-    <script>
-        // Script para comprar convite (apenas um exemplo simples)
-        document.getElementById('comprarConvite').addEventListener('click', function() {
-            alert('Obrigado por apoiar o Projeto Gatitos! Você comprou seu convite.');
-        });
-    </script>
 </body>
 </html>
