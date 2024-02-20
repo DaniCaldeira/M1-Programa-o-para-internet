@@ -3,6 +3,6 @@ export default function autenticar(requisicao, resposta, next){
         next();
     }
     else{
-        respostaredirect('/login.html');
+        resposta.redirect('/login.html');
     }
 }
