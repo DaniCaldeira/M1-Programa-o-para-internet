@@ -12,9 +12,9 @@ const app = express();
 app.use(session({
     secret: 'M1nH4Ch4v3S3cr3t4',
     resave: false,
-    saveUninitializet: true,
+    saveUninitialized: true,
     cookie:{
-        maxAge: 60 * 1000 * 15,
+        maxAge: 60 * 1000 * 15
     }
 }))
 
