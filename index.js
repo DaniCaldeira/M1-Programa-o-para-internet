@@ -9,6 +9,10 @@ const porta = 3000;
 
 const app = express();
 
+// Configuração do middleware para análise de corpo da requisição
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use(session({
     secret: 'M1nH4Ch4v3S3cr3t4',
     resave: false,
@@ -16,7 +20,7 @@ app.use(session({
     cookie:{
         maxAge: 60 * 1000 * 15
     }
-}))
+}));
 
 app.post('/login', (requisicao, resposta)=>{
     const usuario = requisicao.body.usuario;
@@ -28,7 +32,7 @@ app.post('/login', (requisicao, resposta)=>{
     else{
         resposta.redirect('/login.html');
     }
-})
+});
 
 app.use(express.static(path.join(process.cwd(), 'publico')));
 
