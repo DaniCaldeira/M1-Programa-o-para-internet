@@ -49,10 +49,24 @@
             text-decoration: none;
             display: inline-block;
             margin-bottom: 10px;
+            transition: background-color 0.3s ease;
         }
 
         .button:hover {
             background-color: #0056b3;
+        }
+
+        /* Responsividade */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -89,5 +103,11 @@
             <p>&copy; 2024 Projeto Gatitos</p>
         </footer>
     </div>
+    <script>
+        // Script para comprar convite (apenas um exemplo simples)
+        document.getElementById('comprarConvite').addEventListener('click', function() {
+            alert('Obrigado por apoiar o Projeto Gatitos! Você comprou seu convite.');
+        });
+    </script>
 </body>
 </html>
