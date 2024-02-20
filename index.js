@@ -16,7 +16,19 @@ app.use(session({
     cookie:{
         maxAge: 60 * 1000 * 15
     }
-}));
+}))
+
+app.post('/login', (requisicao, resposta)=>{
+    const usuario = requisicao.body.usuario;
+    const senha = requisicao.body.senha;
+    if (usuario && senha === 'Renato' && senha === '123'){
+        requisicao.session.usuarioLogado = true;
+        resposta.redirect('/cadastroCliente.html');
+    }
+    else{
+        resposta.redirect('/login.html');
+    }
+})
 
 app.use(express.static(path.join(process.cwd(), 'publico')));
 
