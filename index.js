@@ -9,6 +9,8 @@ const porta = 3000;
 
 const app = express();
 
+app.use(express.urlencoded({extended: true}));
+
 app.use(session({
     secret: 'M1nH4Ch4v3S3cr3t4',
     resave: false,
