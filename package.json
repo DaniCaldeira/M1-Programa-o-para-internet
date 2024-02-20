@@ -4,8 +4,8 @@
   "description": "Vendas de ingressos online",
   "main": "index.js",
   "type": "module",
-  "scripts":
-  { "start": "node index.js",
+  "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/DaniCaldeira/M1-Programa-o-para-internet/issues"
   },
-  "homepage": "https://github.com/DaniCaldeira/M1-Programa-o-para-internet#readme"
+  "homepage": "https://github.com/DaniCaldeira/M1-Programa-o-para-internet#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }

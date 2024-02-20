@@ -5,6 +5,9 @@ const porta = 3000;
 
 const app = express();
 
-app.listen(porta, hots, ()=>{
+
+
+
+app.listen(porta, host, ()=>{
     console.log(`Servidor escutando em http://${host}:${porta}`);
 })
