@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Beneficente - Detalhes do Evento</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px 0;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        /* Botão Comprar Convite */
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsividade */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Detalhes do Evento - Dia 1</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Descrição do Evento</h2>
+                <p>O evento do Dia 1 contará com apresentações musicais e atividades interativas para os participantes.</p>
+            </section>
+            <section>
+                <h2>Informações</h2>
+                <p>Data: 20 de Março de 2024</p>
+                <p>Horário: 18:00 - 22:00</p>
+                <p>Local: Teatro Municipal</p>
+                <p>Preço do Ingresso: R$ 15,00</p>
+                <p>Quantidade de Ingressos Disponíveis: 100</p>
+            </section>
+            <section>
+                <h2>Compre seu Ingresso</h2>
+                <label for="quantidadeIngressos">Quantidade de Ingressos:</label>
+                <input type="number" id="quantidadeIngressos" min="1" max="100" value="1">
+                <p>Total a Pagar: <span id="totalPagar">R$ 15,00</span></p>
+                <button id="comprarIngresso" class="button">Comprar Ingresso</button>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Projeto Gatitos</p>
+        </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const quantidadeIngressosInput = document.getElementById('quantidadeIngressos');
+            const totalPagarSpan = document.getElementById('totalPagar');
+
+            quantidadeIngressosInput.addEventListener('input', function() {
+                const quantidade = parseInt(quantidadeIngressosInput.value);
+                const precoIngresso = 15; // Preço fixo do ingresso
+
+                const total = quantidade * precoIngresso;
+                totalPagarSpan.textContent = 'R$ ' + total.toFixed(2);
+            });
+
+            const comprarIngressoButton = document.getElementById('comprarIngresso');
+            comprarIngressoButton.addEventListener('click', function() {
+                const quantidade = parseInt(quantidadeIngressosInput.value);
+                const total = parseFloat(totalPagarSpan.textContent.replace('R$ ', ''));
+
+                alert(`Você comprou ${quantidade} ingresso(s) no valor total de R$ ${total.toFixed(2)}. Obrigado por apoiar o Projeto Gatitos!`);
+            });
+        });
+    </script>
+</body>
+</html>
