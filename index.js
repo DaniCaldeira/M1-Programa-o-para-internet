@@ -16,7 +16,7 @@ app.use(session({
     cookie:{
         maxAge: 60 * 1000 * 15
     }
-}));
+}))
 
 app.post('/login', (requisicao, resposta)=>{
     const usuario = requisicao.body.usuario;
@@ -28,7 +28,7 @@ app.post('/login', (requisicao, resposta)=>{
     else{
         resposta.redirect('/login.html');
     }
-});
+})
 
 app.use(express.static(path.join(process.cwd(), 'publico')));
 
