@@ -9,86 +9,77 @@
 
     <style>
         /* Estilos gerais */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; 
-        }
+       /* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #007bff;
-            border-radius: 10px; /* Adiciona bordas arredondadas */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        
-        }
+/* Container principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #007bff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-        header{
-            color: #fff;
-            padding: 50px;
-            text-align: center;
-            width: 100%;
-            display: block;
-        }
+/* Cabeçalho */
+header {
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+}
 
-        footer{
-            color: #fff;
-            padding: 20px; /* Aumentei o padding para dar mais espaçamento interno */
-            text-align: center;
-            background-color: #333;
-            width: 100%; /* Definindo a largura do footer como 100% */
-            position: fixed; /* Fixa o footer na parte inferior da tela */
-            bottom: 0; /* Alinha o footer na parte inferior da página */
-            left: 0; /* Alinha o footer à esquerda */
-            z-index: 1000;
-        }
+/* Rodapé */
+footer {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
 
-        main {
-            flex: 1;
-        }
+/* Botão */
+.button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
 
-        section {
-            margin-bottom: 20px;
-        }
+.button:hover {
+    background-color: #0056b3;
+}
 
-        h1, h2 {
-            color: #333;
-        }
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+}
 
-        .button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-            margin-bottom: 10px;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Responsividade */
-        @media screen and (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-            h1 {
-                font-size: 24px;
-            }
-            h2 {
-                font-size: 20px;
-            }
-        }
     </style>
 </head>
 <body>
