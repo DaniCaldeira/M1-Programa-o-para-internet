@@ -36,11 +36,14 @@
 
         footer{
             color: #fff;
-            padding: 10px;
+            padding: 20px; /* Aumentei o padding para dar mais espaçamento interno */
             text-align: center;
-            display: block;
             background-color: #333;
-            max-width: 100%;
+            width: 100%; /* Definindo a largura do footer como 100% */
+            position: fixed; /* Fixa o footer na parte inferior da tela */
+            bottom: 0; /* Alinha o footer na parte inferior da página */
+            left: 0; /* Alinha o footer à esquerda */
+            z-index: 1000;
         }
 
         main {
