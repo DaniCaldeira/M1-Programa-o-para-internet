@@ -37,5 +37,5 @@ app.use(express.static(path.join(process.cwd(), 'publico')));
 app.use(autenticar, express.static(path.join(process.cwd(), 'privado')));
 
 app.listen(porta, host, ()=>{
-    console.log(`Servidor escutando em http://${host}:${porta}`);
+    console.log(`Servidor escutando em http://localhost:${porta}`);
 })
