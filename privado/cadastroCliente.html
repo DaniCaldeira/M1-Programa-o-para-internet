@@ -8,35 +8,64 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <style>
-        
-body {
+       body {
     font-family: Arial, sans-serif;
-    margin: 50px;
+    margin: 70px 50px; /* Margem superior e inferior de 70px, margem lateral de 50px */
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 150vh; 
-    overflow-x: hidden; 
-    overflow-y: auto; 
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
     padding-bottom: 100px;
     background-color: #dcdcdc;
 }
 
-
 .container {
-    max-width: 100%;
+    max-width: 900px; /* Aumentando a largura do container */
     margin: 0 auto;
-    padding: 0;
+    padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
 }
 
-
-header {
-    color: black;
-    padding: 50px;
-    text-align: center;
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
+th {
+    background-color: #f2f2f2;
+}
+
+.btn-editar, .btn-excluir {
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-editar {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+}
+
+.btn-excluir {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+}
+
+.btn-editar:hover {
+    background-color: #218838;
+}
+
+.btn-excluir:hover {
+    background-color: #c82333;
+}
 
 footer {
     color: #fff;
@@ -49,69 +78,68 @@ footer {
     left: 0;
     z-index: 1000;
 }
-
-.button {
-    background-color: #007bff;
+.btn-verde {
+    background-color: #28a745;
+    border-color: #28a745;
     color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 10px;
-    transition: background-color 0.3s ease;
 }
 
-.button:hover {
-    background-color: #0056b3;
+.btn-verde:hover {
+    background-color: #218838;
+    border-color: #218838;
 }
-
-@media screen and (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-    h1 {
-        font-size: 24px;
-    }
-    h2 {
-        font-size: 20px;
-    }
-}
-
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Evento Beneficente - Projeto Gatitos</h1>
-        </header>
-        <main>
-            <section>
-                <h2>Informações do Evento</h2>
-                <p>O Projeto Gatitos é uma ONG dedicada ao cuidado e proteção de gatos em situação de vulnerabilidade.</p>
-                <p>Estamos entusiasmados em anunciar nosso próximo evento beneficente, uma iniciativa que visa angariar recursos vitais para a continuidade do nosso trabalho em prol desses animais tão queridos.</p>
-                <p>O evento será realizado ao longo de três dias, inicia no dia 29/02/24 e irá até o dia 02/03/24, das 18:00 às 22:00, oferecendo uma oportunidade única de apoio à causa dos gatos em necessidade.</p>
-                <p>Além de ser uma ocasião de solidariedade e união, o evento destaca-se como uma fonte crucial de sustento para nossos esforços de resgate, alimentação, cuidados veterinários e reabilitação dos gatos que acolhemos.</p>
-                <p>No evento, os participantes poderão desfrutar de emocionantes atrações musicais da região, trazendo ainda mais alegria e entretenimento para todos os presentes. Além disso, teremos uma encantadora feira de artesanato, repleta de peças únicas e criativas para os amantes de gatos e arte apreciarem.</p>
-                <p>Ao adquirir um convite no valor de R$ 15,00, você não apenas garante sua participação em um evento cheio de atividades e entretenimento, mas também contribui diretamente para a garantia de um futuro melhor para os gatinhos que dependem da nossa ajuda.</p>
-                <p>Junte-se a nós nesse momento especial e faça parte dessa missão de amor e compaixão pelos animais.</p>
-            </section>
-            <section>
-                <h2>Localização</h2>
-                <p>Endereço: Rua dos Gatinhos, 123 - Bairro Felino</p>
-                <p>Cidade: Cidade dos Felinos</p>
-            </section>
-            <section>
-                <h2>Horários</h2>
-                <p>Evento dia 24/02: 18:00 - 22:00 <a href="detalhes_dia1.html" class="button">Detalhes</a></p>
-                <p>Evento dia 01/03: 18:00 - 22:00 <a href="detalhes_dia2.html" class="button">Detalhes</a></p>
-                <p>Evento dia 02/03: 18:00 - 22:00 <a href="detalhes_dia3.html" class="button">Detalhes</a></p>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2024 Projeto Gatitos</p>
-        </footer>
+        <h1>Cadastrar Cliente</h1>
+        
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input class="form-control" type="text" name="nome" id="nome" />
+        </div>
+        <div class="form-group">
+            <label for="cpf">CPF</label>
+            <input class="form-control" type="text" name="cpf" id="cpf" />
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-control" type="email" name="email" id="email" />
+        </div>
+        <div class="form-group">
+            <label for="endereco">Endereço</label>
+            <input class="form-control" type="text" name="endereco" id="endereco" />
+        </div>
+        <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input class="form-control" type="text" name="telefone" id="telefone" />
+        </div>
+
+        <button id="btnCadastrar" class="btn btn-primary">Cadastrar</button>
+        <button id="btnEditar" class="btn btn-primary editarBtn btn-verde">Atualizar</button>
+
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>CPF</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Endereço</th>
+                    <th>Telefone</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="corpo-tabela">
+                <!-- Os dados serão preenchidos aqui dinamicamente -->
+            </tbody>
+        </table>
     </div>
+    
+    <footer>
+        <p>&copy; 2024 Projeto Gatitos</p>
+    </footer>
+   
 </body>
+<script src="./script/scriptCliente.js"></script>
 </html>

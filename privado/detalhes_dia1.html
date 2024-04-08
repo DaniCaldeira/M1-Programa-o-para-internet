@@ -98,40 +98,49 @@ footer {
                 <p>Preço do Ingresso: R$ 15,00</p>
                 <p>Quantidade de Ingressos Disponíveis: 100</p>
             </section>
-            <section>
-                <h2>Compre seu Ingresso</h2>
-                <label for="quantidadeIngressos">Quantidade de Ingressos:</label>
-                <input type="number" id="quantidadeIngressos" min="1" max="100" value="1">
-                <p>Total a Pagar: <span id="totalPagar">R$ 15,00</span></p>
-                <button id="comprarIngresso" class="button">Comprar Ingresso</button>
-            </section>
+
+            <div>
+                <h1>Cadastrar Cliente</h1>
+            
+                <div>
+                    <div class="form-group">
+                        <label for="usuarioNome">Nome</label>
+                        <input class="form-control" type="text" name="nome"  id="nome"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="usuarioNome">Cpf</label>
+                        <input class="form-control" type="text" name="cpf" id="cpf" />
+                    </div>
+                    <div class="form-group">
+                        <label for="usuarioNome">Email</label>
+                        <input class="form-control" type="email" name="email"id="email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="usuarioNome">Endereço</label>
+                        <input class="form-control" type="text" name="text" id="endereco" />
+                    </div>
+                    <div class="form-group">
+                        <label for="usuarioNome">Telefone</label>
+                        <input class="form-control" type="text" name="telefone" id="telefone" />
+                    </div>
+                </div>
+                <button id="btnGravar" class="btn btn-primary" onclick="cadastrarCliente()">Gravar</button>
+                        <a class="btn btn-secondary" href="/">Voltar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" id="espacoTabela">
+
+            </div>
+
         </main>
         <footer>
             <p>&copy; 2024 Projeto Gatitos</p>
         </footer>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const quantidadeIngressosInput = document.getElementById('quantidadeIngressos');
-            const totalPagarSpan = document.getElementById('totalPagar');
-
-            quantidadeIngressosInput.addEventListener('input', function() {
-
-                const quantidade = parseInt(quantidadeIngressosInput.value);
-                const precoIngresso = 15; // Preço fixo do ingresso
-
-                const total = quantidade * precoIngresso;
-                totalPagarSpan.textContent = 'R$ ' + total.toFixed(2);
-            });
-
-            const comprarIngressoButton = document.getElementById('comprarIngresso');
-            comprarIngressoButton.addEventListener('click', function() {
-                const quantidade = parseInt(quantidadeIngressosInput.value);
-                const total = parseFloat(totalPagarSpan.textContent.replace('R$ ', ''));
-
-                alert(`Você comprou ${quantidade} ingresso(s) no valor total de R$ ${total.toFixed(2)}. Obrigado por apoiar o Projeto Gatitos!`);
-            });
-        });
-    </script>
+    
+   
 </body>
+<script src="./script/scriptCliente.js"></script>
 </html>
